@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact | Nat Consulting Ltd.</title>
+<meta name="description" content="Get in touch with Nat Consulting Ltd. for emotional intelligence coaching, Bible study resources, educational workbooks, and workshop bookings."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--deep:#0D1B2A;--navy:#1A2E45;--cream:#FAF7F2;--warm:#F5EFE4;--text:#2C2C2C;--muted:#6B7280;--white:#FFFFFF;--accent:#B85C38}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;border-bottom:1px solid rgba(201,168,76,0.2);transition:box-shadow 0.3s}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--gold);letter-spacing:0.5px}
+.nav-logo span{color:var(--white);font-weight:300}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.8);font-size:0.88rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+.nav-cta{background:var(--gold) !important;color:var(--deep) !important;padding:0.45rem 1.2rem;border-radius:4px;font-weight:600 !important;transition:background 0.2s !important}
+.nav-cta:hover{background:var(--gold-light) !important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:0.3s}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(13,27,42,0.98);padding:1.5rem 5%;z-index:99;flex-direction:column;gap:0.75rem;border-bottom:1px solid rgba(201,168,76,0.2)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:rgba(255,255,255,0.8);font-size:1rem;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.07);transition:color 0.2s}
+.mobile-menu a:last-child{border:none;color:var(--gold);font-weight:600}
+.mobile-menu a:hover{color:var(--gold)}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:0.85rem 2rem;border-radius:4px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.3px;cursor:pointer;transition:all 0.25s;border:none;text-align:center}
+.btn-gold{background:var(--gold);color:var(--deep)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.35)}
+.btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--deep);transform:translateY(-2px)}
+.btn-dark{background:var(--deep);color:var(--white)}
+.btn-dark:hover{background:var(--navy);transform:translateY(-2px)}
+.btn-white{background:var(--white);color:var(--deep)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px)}
+
+/* LAYOUT */
+.section{padding:5.5rem 5%}
+.section-dark{background:var(--deep);color:var(--white)}
+.section-navy{background:var(--navy);color:var(--white)}
+.section-warm{background:var(--warm)}
+.section-cream{background:var(--cream)}
+.container{max-width:1140px;margin:0 auto}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:1.25rem}
+.section-subtitle{font-size:1.05rem;color:var(--muted);max-width:600px;line-height:1.8}
+.section-dark .section-subtitle,.section-navy .section-subtitle{color:rgba(255,255,255,0.7)}
+.divider{width:60px;height:3px;background:var(--gold);margin:1.25rem 0}
+.text-center{text-align:center}
+.text-center .divider{margin:1.25rem auto}
+.text-center .section-subtitle{margin:0 auto}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--deep) 0%,#0a2540 50%,#1a1a2e 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:70px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(201,168,76,0.12) 0%,transparent 65%)}
+.hero-grid-bg{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,0.5) 60px,rgba(255,255,255,0.5) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(255,255,255,0.5) 60px,rgba(255,255,255,0.5) 61px)}
+.hero-inner{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:4rem 5%;display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);color:var(--gold-light);font-size:0.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:50px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.8rem,5vw,4.2rem);color:var(--white);margin-bottom:1.25rem;font-weight:600}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:1.1rem;color:rgba(255,255,255,0.75);margin-bottom:2.5rem;line-height:1.85;max-width:520px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:0.25rem}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.card-stack{position:relative;width:300px;height:380px}
+.hcard{position:absolute;width:240px;height:300px;border-radius:12px;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.hcard:nth-child(1){background:linear-gradient(145deg,#B85C38,#8B3A22);top:0;left:0;transform:rotate(-6deg)}
+.hcard:nth-child(2){background:linear-gradient(145deg,var(--navy),#0a1628);top:30px;left:40px;transform:rotate(-1deg);z-index:2;animation:floatCard 5s ease-in-out infinite}
+.hcard:nth-child(3){background:linear-gradient(145deg,#2d5016,#1a3009);top:60px;left:80px;transform:rotate(4deg);z-index:1}
+.hcard-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);font-weight:600;margin-bottom:0.3rem}
+.hcard-sub{font-size:0.72rem;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase}
+@keyframes floatCard{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+
+/* TRUST BAR */
+.trust-bar{background:var(--white);padding:1.5rem 5%;border-bottom:1px solid rgba(0,0,0,0.07)}
+.trust-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;font-weight:500;color:var(--muted)}
+
+/* SCRIPTURE BANNER */
+.scripture-banner{background:var(--warm);padding:3rem 5%;text-align:center;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+.scripture-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3vw,2rem);font-style:italic;color:var(--deep);max-width:700px;margin:0 auto 0.75rem;line-height:1.5}
+.scripture-ref{font-size:0.82rem;font-weight:600;letter-spacing:1px;color:var(--gold);text-transform:uppercase}
+
+/* CARDS */
+.card{background:var(--white);border-radius:12px;padding:2rem;box-shadow:0 2px 20px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+.card-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem}
+.card h3{font-size:1.3rem;margin-bottom:0.75rem}
+.card p{font-size:0.92rem;color:var(--muted);line-height:1.75}
+
+/* BOOK CARDS */
+.book-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}
+.book-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,0.15)}
+.book-cover{height:220px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.bc1{background:linear-gradient(145deg,#1a3a5c,#0d2035)}
+.bc2{background:linear-gradient(145deg,#2d1a4a,#1a0d2e)}
+.bc3{background:linear-gradient(145deg,#1a3a1a,#0d2010)}
+.book-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.book-tag{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);padding:0.25rem 0.7rem;border-radius:50px;margin-bottom:0.75rem}
+.book-body h3{font-size:1.25rem;margin-bottom:0.75rem;color:var(--deep)}
+.book-body p{font-size:0.88rem;color:var(--muted);line-height:1.75;flex:1;margin-bottom:1.5rem}
+.book-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.book-actions .btn{font-size:0.82rem;padding:0.6rem 1.1rem}
+
+/* SERVICE CARDS */
+.svc-card{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:16px;padding:2.5rem;transition:all 0.3s}
+.svc-card:hover{background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.5);transform:translateY(-4px)}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:rgba(201,168,76,0.2);line-height:1;margin-bottom:1rem}
+.svc-card h3{font-size:1.5rem;color:var(--white);margin-bottom:0.75rem}
+.svc-card p{color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.8;margin-bottom:1.5rem}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.svc-list li{font-size:0.85rem;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:0.5rem}
+.svc-list li::before{content:'✦';color:var(--gold);font-size:0.6rem;flex-shrink:0}
+
+/* TESTIMONIALS */
+.testi{background:var(--white);border-radius:16px;padding:2.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.06);position:relative}
+.testi::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:6rem;color:var(--gold);opacity:0.2;position:absolute;top:-1rem;left:1.5rem;line-height:1}
+.testi p{font-size:0.95rem;color:var(--text);line-height:1.85;margin-bottom:1.5rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:0.75rem}
+.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--accent));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--white);font-size:1.1rem;flex-shrink:0}
+.author-name{font-weight:600;font-size:0.9rem}
+.author-role{font-size:0.78rem;color:var(--muted)}
+
+/* BLOG CARDS */
+.blog-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 10px 36px rgba(0,0,0,0.12)}
+.blog-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.bt1{background:#f0f5ff;border-bottom:3px solid var(--gold)}
+.bt2{background:#fff5f0;border-bottom:3px solid var(--accent)}
+.bt3{background:#f0fff0;border-bottom:3px solid #4a8c4a}
+.bt4{background:#f5f0ff;border-bottom:3px solid #8B5CF6}
+.bt5{background:#f0f4f8;border-bottom:3px solid var(--navy)}
+.blog-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.blog-cat{font-size:0.7rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}
+.blog-date{font-size:0.75rem;color:var(--muted)}
+.blog-body h3{font-size:1.1rem;margin-bottom:0.75rem;margin-top:0.5rem}
+.blog-body p{font-size:0.88rem;color:var(--muted);line-height:1.7;flex:1;margin-bottom:1rem}
+.read-more{font-size:0.82rem;font-weight:600;color:var(--gold);display:inline-flex;align-items:center;gap:0.3rem;transition:gap 0.2s}
+.read-more:hover{gap:0.6rem}
+
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.value-item{display:flex;align-items:flex-start;gap:0.75rem;padding:1rem;background:var(--warm);border-radius:10px}
+.value-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem}
+.value-name{font-weight:600;font-size:0.88rem;margin-bottom:0.2rem}
+.value-desc{font-size:0.8rem;color:var(--muted)}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--deep),var(--navy));padding:8rem 5% 5rem;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(201,168,76,0.08),transparent 60%)}
+.page-hero>*{position:relative}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);color:var(--white);margin-bottom:1rem}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+.breadcrumb a{color:rgba(255,255,255,0.5);transition:color 0.2s}
+.breadcrumb a:hover{color:var(--gold)}
+.breadcrumb span{color:var(--gold)}
+
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--deep) 0%,#1a2e45 100%);padding:6rem 5%;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.1) 0%,transparent 70%)}
+.cta-banner>*{position:relative;z-index:1}
+.cta-banner h2{font-size:clamp(2rem,4vw,3rem);color:var(--white);margin-bottom:1rem}
+.cta-banner p{color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:540px;margin:0 auto 2.5rem}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ABOUT IMG */
+.about-img-frame{width:100%;aspect-ratio:4/5;background:linear-gradient(145deg,var(--navy),var(--deep));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative;overflow:hidden}
+.about-img-frame::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(13,27,42,0.7),transparent)}
+.about-wrap{position:relative}
+.about-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--deep);padding:1.25rem 1.5rem;border-radius:12px;box-shadow:0 8px 30px rgba(201,168,76,0.35);z-index:2}
+.accent-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;line-height:1}
+.accent-text{font-size:0.78rem;font-weight:600}
+.prose p{font-size:0.95rem;color:var(--muted);line-height:1.85;margin-bottom:1.25rem}
+.prose h3{font-size:1.4rem;margin-bottom:0.75rem;margin-top:2rem}
+.prose ul{list-style:none;padding:0}
+.prose ul li{padding:0.4rem 0 0.4rem 1.5rem;position:relative;font-size:0.92rem;color:var(--muted)}
+.prose ul li::before{content:'✦';color:var(--gold);font-size:0.6rem;position:absolute;left:0;top:0.65rem}
+
+/* CONTACT */
+.contact-form-wrap{background:var(--white);border-radius:20px;padding:2.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group.full{grid-column:1/-1}
+label{font-size:0.82rem;font-weight:600;color:var(--text);letter-spacing:0.3px}
+input,textarea,select{border:1.5px solid rgba(0,0,0,0.1);border-radius:8px;padding:0.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;color:var(--text);background:var(--cream);transition:border-color 0.2s,box-shadow 0.2s;outline:none;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,0.12)}
+.contact-info-card{background:var(--deep);border-radius:20px;padding:2.5rem;color:var(--white);height:100%}
+.contact-info-card h3{font-size:1.8rem;color:var(--white);margin-bottom:0.75rem}
+.contact-info-card>p{color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.8;margin-bottom:2rem}
+.c-detail{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
+.c-detail-icon{width:44px;height:44px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;color:var(--gold);font-weight:700}
+.c-detail-text strong{display:block;font-size:0.78rem;color:var(--gold);margin-bottom:0.2rem;font-weight:600;letter-spacing:0.3px;text-transform:uppercase}
+.c-detail-text a{color:rgba(255,255,255,0.8);font-size:0.92rem;transition:color 0.2s}
+.c-detail-text a:hover{color:var(--gold)}
+.social-row{display:flex;gap:0.75rem;margin-top:1.5rem}
+.soc-btn{width:42px;height:42px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:700;transition:all 0.2s;cursor:pointer}
+.soc-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--deep)}
+.wa-btn{display:flex;align-items:center;gap:0.75rem;background:#25D366;color:var(--white);padding:1rem 1.5rem;border-radius:12px;margin-top:1.5rem;font-weight:600;font-size:0.92rem;transition:all 0.2s;text-decoration:none}
+.wa-btn:hover{background:#1fb858;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.3);color:var(--white)}
+
+/* BOOK FULL */
+.book-full{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.09);margin-bottom:3.5rem}
+.book-full-inner{display:grid;grid-template-columns:320px 1fr;min-height:440px}
+.book-full-cover{display:flex;align-items:center;justify-content:center;font-size:5rem}
+.book-full-body{padding:3rem}
+.book-feat-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin:1.25rem 0}
+.book-feat-list li{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
+.book-feat-list li::before{content:'✦';color:var(--gold);font-size:0.6rem}
+.price-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(201,168,76,0.1);border:1.5px solid rgba(201,168,76,0.3);color:var(--gold);padding:0.4rem 1rem;border-radius:50px;font-size:0.82rem;font-weight:600;margin-bottom:1rem}
+.canva-box{background:linear-gradient(135deg,#f5f3ff,#ede9fe);border:1.5px solid #a78bfa;border-radius:12px;padding:1.5rem;margin-top:1.5rem}
+.canva-box h4{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#6d28d9;margin-bottom:0.75rem}
+.canva-box p{font-size:0.85rem;color:#4c1d95;line-height:1.7}
+
+/* ARTICLE FULL */
+.article-full{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.07);margin-bottom:2.5rem;display:grid;grid-template-columns:200px 1fr}
+.art-thumb{display:flex;align-items:center;justify-content:center;font-size:3rem;min-height:200px}
+.art-body{padding:2.5rem}
+.art-body h3{font-size:1.5rem;margin-bottom:0.75rem}
+.art-body p{font-size:0.92rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+.tag-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tag{font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:50px}
+.tag-bible{background:rgba(201,168,76,0.12);color:#8a6a10;border:1px solid rgba(201,168,76,0.3)}
+.tag-eq{background:rgba(184,92,56,0.1);color:#8B3A22;border:1px solid rgba(184,92,56,0.25)}
+.tag-edu{background:rgba(26,58,90,0.08);color:#1a3a5c;border:1px solid rgba(26,58,90,0.2)}
+.tag-dev{background:rgba(45,80,22,0.08);color:#1a4010;border:1px solid rgba(45,80,22,0.2)}
+
+/* FOOTER */
+footer{background:#07111c;color:rgba(255,255,255,0.6);padding:5rem 5% 2rem}
+.footer-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:2rem}
+.footer-brand p{font-size:0.88rem;line-height:1.8;margin:1rem 0 1.5rem}
+.footer-col h4{font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.footer-col li a{font-size:0.88rem;transition:color 0.2s}
+.footer-col li a:hover{color:var(--gold)}
+.footer-bottom{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-size:0.82rem;flex-wrap:wrap;gap:1rem}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid-2,.hero-inner{grid-template-columns:1fr}
+  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
+  .hero-visual{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .book-full-inner{grid-template-columns:1fr}
+  .book-full-cover{min-height:200px}
+  .article-full{grid-template-columns:1fr}
+  .art-thumb{min-height:120px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .grid-3,.grid-4{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .section{padding:4rem 5%}
+  .contact-form-wrap,.contact-info-card{padding:1.75rem}
+}
+</style>
+
+
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></div>
+  <h1>Get in <em>Touch</em></h1>
+  <p>We would love to hear from you. Whether you want to book a session, ask about our books, or simply connect — reach out today.</p>
+</section>
+
+<section class="section section-cream">
+<div class="container">
+<div class="grid-2" style="gap:3.5rem;align-items:start;">
+
+<div>
+<span class="section-label">Send a Message</span>
+<h2 class="section-title">How Can We <em>Help You?</em></h2>
+<div class="divider"></div>
+<p style="color:#6B7280;font-size:0.92rem;line-height:1.8;margin-bottom:2rem;">Fill in the form below and we will get back to you within 24 hours. You can also reach us directly on WhatsApp for a faster response.</p>
+<div class="contact-form-wrap">
+<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="form-row">
+<div class="form-group"><label for="fn">First Name</label><input type="text" id="fn" name="firstName" placeholder="Your first name" required/></div>
+<div class="form-group"><label for="ln">Last Name</label><input type="text" id="ln" name="lastName" placeholder="Your last name" required/></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label for="em">Email Address</label><input type="email" id="em" name="email" placeholder="your@email.com" required/></div>
+<div class="form-group"><label for="ph">Phone / WhatsApp</label><input type="tel" id="ph" name="phone" placeholder="+234 ..."/></div>
+</div>
+<div class="form-group full" style="margin-bottom:1.25rem;">
+<label for="sub">What are you enquiring about?</label>
+<select id="sub" name="subject">
+<option value="">Select a topic...</option>
+<option>Emotional Intelligence Coaching</option>
+<option>EQ Workshop Booking</option>
+<option>Bible Study Workbook</option>
+<option>Prayer Journal</option>
+<option>Emotional Intelligence Workbook</option>
+<option>Bulk Book Order</option>
+<option>Free Resources / Newsletter</option>
+<option>General Enquiry</option>
+</select>
+</div>
+<div class="form-group full" style="margin-bottom:1.75rem;">
+<label for="msg">Your Message</label>
+<textarea id="msg" name="message" rows="5" placeholder="Tell us about your goals, needs, or questions. The more detail you share, the better we can help..." required></textarea>
+</div>
+<button type="submit" class="btn btn-gold" style="width:100%;font-size:1rem;padding:1rem;">Send Message</button>
+<p style="font-size:0.78rem;color:#6B7280;text-align:center;margin-top:1rem;">We respect your privacy. Your details will never be shared with third parties.</p>
+</form>
+</div>
+</div>
+
+<div>
+<div class="contact-info-card">
+<h3>Contact Information</h3>
+<p>Prefer to reach out directly? Choose the channel that works best for you. We aim to respond to all enquiries within 24 hours.</p>
+
+<div class="c-detail">
+<div class="c-detail-icon">@</div>
+<div class="c-detail-text"><strong>Email</strong><a href="mailto:ojonathanielf@gmail.com">ojonathanielf@gmail.com</a></div>
+</div>
+
+<div class="c-detail">
+<div class="c-detail-icon">&#128222;</div>
+<div class="c-detail-text"><strong>Phone / WhatsApp</strong><a href="tel:+2349033179833">+234 903 317 9833</a></div>
+</div>
+
+<div class="c-detail">
+<div class="c-detail-icon">f</div>
+<div class="c-detail-text"><strong>Facebook</strong><a href="https://www.facebook.com/ojo.nathaniel3?mibextid=ZbWKwL" target="_blank">Nathaniel Ojo</a></div>
+</div>
+
+<div class="c-detail">
+<div class="c-detail-icon">in</div>
+<div class="c-detail-text"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/nathanielojo" target="_blank">Nathaniel Ojo</a></div>
+</div>
+
+<div class="social-row">
+<a href="https://www.facebook.com/ojo.nathaniel3?mibextid=ZbWKwL" target="_blank" class="soc-btn">f</a>
+<a href="https://www.linkedin.com/in/nathanielojo" target="_blank" class="soc-btn">in</a>
+<a href="https://wa.me/2349033179833" target="_blank" class="soc-btn">W</a>
+</div>
+
+<a href="https://wa.me/2349033179833?text=Hello%20Nat%20Consulting%2C%20I%20would%20like%20to%20find%20out%20more%20about%20your%20services." target="_blank" class="wa-btn">
+<span style="font-size:1.4rem;">&#128172;</span>
+<div><strong style="display:block;">Chat on WhatsApp</strong><span style="font-size:0.78rem;opacity:0.85;">Tap to start a conversation now</span></div>
+</a>
+</div>
+
+<div style="background:linear-gradient(135deg,#C9A84C,#a8851f);border-radius:20px;padding:2rem;margin-top:1.5rem;">
+<div style="font-size:2rem;margin-bottom:0.75rem;">&#128197;</div>
+<h3 style="font-size:1.4rem;margin-bottom:0.5rem;color:#0D1B2A;font-family:'Cormorant Garamond',serif;">Book a Coaching Session</h3>
+<p style="font-size:0.88rem;line-height:1.7;margin-bottom:1.25rem;color:rgba(0,0,0,0.65);">Ready to invest in your growth? Reach out via WhatsApp or the form to schedule your first emotional intelligence coaching session or group workshop.</p>
+<a href="https://wa.me/2349033179833?text=Hello%2C%20I%20would%20like%20to%20book%20a%20coaching%20session." target="_blank" class="btn btn-dark" style="display:inline-block;">Book via WhatsApp</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section section-warm">
+<div class="container">
+<div class="text-center" style="margin-bottom:3rem;">
+<span class="section-label">Common Questions</span>
+<h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+<div class="divider" style="margin:1.5rem auto;"></div>
+</div>
+<div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:1.25rem;">
+<div class="card"><h3 style="font-size:1.15rem;margin-bottom:0.5rem;">How do I get your books?</h3><p style="font-size:0.9rem;color:#6B7280;">Our books are available on Google Drive for preview and can be ordered through Amazon KDP for physical or digital copies. Links are on the Books page. You can also contact us directly for bulk orders.</p></div>
+<div class="card"><h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Do you offer online coaching sessions?</h3><p style="font-size:0.9rem;color:#6B7280;">Yes. We offer both in-person and remote coaching sessions via video call, making our services accessible to clients anywhere in Nigeria and beyond. Contact us to arrange a convenient time.</p></div>
+<div class="card"><h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Can you deliver workshops for my organisation or church?</h3><p style="font-size:0.9rem;color:#6B7280;">Absolutely. We design and deliver workshops for corporate teams, churches, schools, and community groups. Each workshop is tailored to your specific context and goals. Reach out to discuss your needs.</p></div>
+<div class="card"><h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Is there a free resource I can try first?</h3><p style="font-size:0.9rem;color:#6B7280;">Yes. You can download a sample of our resources via the links on the Books page. We also publish regular free articles on the Blog page. Sign up through the contact form to receive future free resources by email.</p></div>
+<div class="card"><h3 style="font-size:1.15rem;margin-bottom:0.5rem;">How soon will I hear back after submitting the form?</h3><p style="font-size:0.9rem;color:#6B7280;">We aim to respond to all enquiries within 24 hours on business days. For a faster response, reach out directly on WhatsApp at +234 903 317 9833.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta-banner">
+<span class="section-label">We Are Here for You</span>
+<h2>Let Us Help You <em>Grow</em></h2>
+<p>Whether you are here for a book, a coaching session, or simply some guidance — we are ready to walk with you.</p>
+<div class="cta-actions">
+<a href="https://wa.me/2349033179833" target="_blank" class="btn btn-gold">Start on WhatsApp</a>
+<a href="books.html" class="btn btn-white">Download a Book</a>
+</div>
+</section>
+
+<div id="footer-ph"></div>
+<script>
+// NAV
+(function(){
+  var pages=[
+    {href:'index.html',label:'Home'},
+    {href:'about.html',label:'About'},
+    {href:'services.html',label:'Services'},
+    {href:'books.html',label:'Books'},
+    {href:'blog.html',label:'Blog'},
+    {href:'contact.html',label:'Contact'}
+  ];
+  var cur=window.location.pathname.split('/').pop()||'index.html';
+  var links=pages.map(function(p){return'<li><a href="'+p.href+'"'+(p.href===cur?' class="active"':'')+'>'+p.label+'</a></li>';}).join('');
+  var mlinks=pages.map(function(p){return'<a href="'+p.href+'"'+(p.href===cur?' class="active"':'')+'>'+p.label+'</a>';}).join('');
+  document.getElementById('nav-ph').innerHTML=
+    '<nav id="mainNav">'+
+      '<a href="index.html" class="nav-logo">Nat <span>Consulting</span></a>'+
+      '<ul class="nav-links">'+links+
+        '<li><a href="contact.html" class="nav-cta">Book a Session</a></li>'+
+      '</ul>'+
+      '<div class="hamburger" id="hbg"><span></span><span></span><span></span></div>'+
+    '</nav>'+
+    '<div class="mobile-menu" id="mmenu">'+mlinks+
+      '<a href="contact.html">Book a Session →</a>'+
+    '</div>';
+
+  document.getElementById('hbg').addEventListener('click',function(){
+    document.getElementById('mmenu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(function(l){
+    l.addEventListener('click',function(){document.getElementById('mmenu').classList.remove('open');});
+  });
+  window.addEventListener('scroll',function(){
+    document.getElementById('mainNav').style.boxShadow=window.scrollY>20?'0 4px 30px rgba(0,0,0,0.3)':'none';
+  });
+})();
+
+// FOOTER
+(function(){
+  document.getElementById('footer-ph').innerHTML=
+    '<footer>'+
+      '<div class="footer-grid">'+
+        '<div class="footer-brand">'+
+          '<a href="index.html" class="nav-logo" style="display:block;margin-bottom:1rem;">Nat <span>Consulting</span> Ltd.</a>'+
+          '<p>Empowering lives through Scripture-grounded education, emotional intelligence coaching, and transformative learning resources.</p>'+
+          '<div class="social-row">'+
+            '<a href="https://www.facebook.com/ojo.nathaniel3?mibextid=ZbWKwL" target="_blank" class="soc-btn" title="Facebook">f</a>'+
+            '<a href="https://www.linkedin.com/in/nathanielojo" target="_blank" class="soc-btn" title="LinkedIn">in</a>'+
+            '<a href="https://wa.me/2349033179833" target="_blank" class="soc-btn" title="WhatsApp">W</a>'+
+          '</div>'+
+        '</div>'+
+        '<div class="footer-col"><h4>Quick Links</h4><ul>'+
+          '<li><a href="index.html">Home</a></li>'+
+          '<li><a href="about.html">About</a></li>'+
+          '<li><a href="services.html">Services</a></li>'+
+          '<li><a href="books.html">Books</a></li>'+
+        '</ul></div>'+
+        '<div class="footer-col"><h4>Resources</h4><ul>'+
+          '<li><a href="blog.html">Blog &amp; Articles</a></li>'+
+          '<li><a href="books.html">Free Download</a></li>'+
+          '<li><a href="contact.html">Book a Session</a></li>'+
+          '<li><a href="contact.html">Contact Us</a></li>'+
+        '</ul></div>'+
+        '<div class="footer-col"><h4>Contact</h4><ul>'+
+          '<li><a href="mailto:ojonathanielf@gmail.com">ojonathanielf@gmail.com</a></li>'+
+          '<li><a href="https://wa.me/2349033179833">+234 903 317 9833</a></li>'+
+          '<li><a href="contact.html">Send a Message</a></li>'+
+        '</ul></div>'+
+      '</div>'+
+      '<div class="footer-bottom">'+
+        '<span>&copy; 2025 Nat Consulting Ltd. All rights reserved.</span>'+
+        '<span>Made with faith &amp; purpose</span>'+
+      '</div>'+
+    '</footer>';
+})();
+
+// SCROLL REVEAL
+(function(){
+  var els=document.querySelectorAll('.card,.book-card,.svc-card,.blog-card,.testi,.article-full,.book-full,.value-item');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){el.classList.add('reveal');obs.observe(el);});
+})();
+
+// CONTACT FORM
+(function(){
+  var f=document.getElementById('contactForm');
+  if(!f)return;
+  f.addEventListener('submit',function(e){
+    var btn=f.querySelector('button[type=submit]');
+    btn.textContent='Sending...';
+    // Formspree handles submission natively; this just gives feedback on success
+    setTimeout(function(){
+      btn.textContent='Message Sent! ✓';
+      btn.style.background='#25D366';
+    },1200);
+  });
+})();
+</script>
+
+</body>
+</html>
